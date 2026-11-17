@@ -1,0 +1,40 @@
+{
+  "name": "lotflow-backend",
+  "version": "1.0.0",
+  "description": "LotFlow AI — dealership operations API",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon --watch src src/server.js",
+    "dev:memory": "nodemon --watch src src/server.js --memory",
+    "start:memory": "node src/server.js --memory",
+    "seed": "node src/seed/runSeed.js"
+  },
+  "author": "LotFlow team",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.11.0",
+    "compression": "^1.8.2",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.4",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "lotflow-ai": "file:..",
+    "mongodb-memory-server-core": "^11.3.0",
+    "mongoose": "^9.12.2",
+    "morgan": "^1.12.1",
+    "multer": "^2.5.0",
+    "socket.io": "^4.8.4",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,34 @@
+# Render Blueprint for the LotFlow API.
+# In Render: New + -> Blueprint -> pick this repo. Then fill in the secret values.
+services:
+  - type: web
+    name: lotflow-api
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false # your MongoDB Atlas connection string
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: CLIENT_URL
+        sync: false # e.g. https://lotflow.vercel.app
+      - key: DEMO_MODE
+        value: 'true'
+      - key: AUTO_SEED
+        value: 'true'
+      - key: MEMORY_DB_FALLBACK
+        value: 'false'
+      - key: AI_PROVIDER
+        value: anthropic
+      - key: AI_API_KEY
+        sync: false # optional; leave empty to use the built-in rules engine
+      - key: CLOUDINARY_URL
+        sync: false # optional

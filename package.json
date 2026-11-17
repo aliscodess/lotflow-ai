@@ -1,0 +1,21 @@
+{
+  "name": "lotflow-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LotFlow AI: turn what your dealership sees and says into real-time action.",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently -n api,web -c yellow,cyan \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:memory": "concurrently -n api,web -c yellow,cyan \"npm run dev:memory --prefix backend\" \"npm run dev --prefix frontend\"",
+    "seed": "npm run seed --prefix backend",
+    "build": "npm run build --prefix frontend",
+    "start": "npm start --prefix backend"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
+}

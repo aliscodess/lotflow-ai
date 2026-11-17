@@ -1,0 +1,206 @@
+// Realistic Indian-market reference data for seeding.
+
+export const STORES = [
+  {
+    code: 'S1',
+    name: 'Whitefield',
+    label: 'Store A',
+    city: 'Bengaluru',
+    address: 'ITPL Main Road, Whitefield, Bengaluru 560066',
+    distanceKm: 0,
+    isPrimary: true,
+    metrics: { lotAccuracy: 94, avgDaysToSell: 29, serviceDelayRate: 8, inspectionCompletion: 96, photoCompleteness: 88, listingCompleteness: 90, csat: 4.6, monthlyUnits: 64, inventory: 56 },
+    trend: [
+      { month: 'Jun', avgDays: 34, lotAccuracy: 88, serviceDelay: 13, greenScore: 71 },
+      { month: 'Jul', avgDays: 33, lotAccuracy: 90, serviceDelay: 12, greenScore: 73 },
+      { month: 'Aug', avgDays: 31, lotAccuracy: 91, serviceDelay: 11, greenScore: 76 },
+      { month: 'Sep', avgDays: 30, lotAccuracy: 92, serviceDelay: 10, greenScore: 77 },
+      { month: 'Oct', avgDays: 30, lotAccuracy: 93, serviceDelay: 9, greenScore: 79 },
+      { month: 'Nov', avgDays: 29, lotAccuracy: 94, serviceDelay: 8, greenScore: 82 },
+    ],
+  },
+  {
+    code: 'S2',
+    name: 'Koramangala',
+    label: 'Store B',
+    city: 'Bengaluru',
+    address: '80 Feet Road, Koramangala 4th Block, Bengaluru 560034',
+    distanceKm: 9,
+    metrics: { lotAccuracy: 81, avgDaysToSell: 41, serviceDelayRate: 19, inspectionCompletion: 74, photoCompleteness: 61, listingCompleteness: 68, csat: 4.1, monthlyUnits: 48, inventory: 71 },
+    trend: [
+      { month: 'Jun', avgDays: 37, lotAccuracy: 84, serviceDelay: 15, greenScore: 66 },
+      { month: 'Jul', avgDays: 38, lotAccuracy: 83, serviceDelay: 16, greenScore: 65 },
+      { month: 'Aug', avgDays: 39, lotAccuracy: 82, serviceDelay: 17, greenScore: 64 },
+      { month: 'Sep', avgDays: 40, lotAccuracy: 82, serviceDelay: 18, greenScore: 63 },
+      { month: 'Oct', avgDays: 41, lotAccuracy: 81, serviceDelay: 18, greenScore: 62 },
+      { month: 'Nov', avgDays: 41, lotAccuracy: 81, serviceDelay: 19, greenScore: 61 },
+    ],
+  },
+  {
+    code: 'S3',
+    name: 'Hebbal',
+    label: 'Store C',
+    city: 'Bengaluru',
+    address: 'Bellary Road, Hebbal, Bengaluru 560024',
+    distanceKm: 12,
+    metrics: { lotAccuracy: 96, avgDaysToSell: 27, serviceDelayRate: 6, inspectionCompletion: 98, photoCompleteness: 92, listingCompleteness: 93, csat: 4.7, monthlyUnits: 71, inventory: 63 },
+    trend: [
+      { month: 'Jun', avgDays: 31, lotAccuracy: 92, serviceDelay: 9, greenScore: 74 },
+      { month: 'Jul', avgDays: 30, lotAccuracy: 93, serviceDelay: 8, greenScore: 76 },
+      { month: 'Aug', avgDays: 29, lotAccuracy: 94, serviceDelay: 8, greenScore: 78 },
+      { month: 'Sep', avgDays: 28, lotAccuracy: 95, serviceDelay: 7, greenScore: 80 },
+      { month: 'Oct', avgDays: 28, lotAccuracy: 95, serviceDelay: 7, greenScore: 82 },
+      { month: 'Nov', avgDays: 27, lotAccuracy: 96, serviceDelay: 6, greenScore: 85 },
+    ],
+  },
+];
+
+export const MODELS = [
+  { make: 'Mahindra', model: 'XUV700', variant: 'AX7 L', type: 'SUV', fuelType: 'DIESEL', price: 2450000, expected: 30, wmi: 'MA1' },
+  { make: 'Hyundai', model: 'Creta', variant: 'SX(O)', type: 'SUV', fuelType: 'PETROL', price: 1920000, expected: 24, wmi: 'MAL' },
+  { make: 'Kia', model: 'Seltos', variant: 'HTX+', type: 'SUV', fuelType: 'PETROL', price: 1840000, expected: 26, wmi: 'MZB' },
+  { make: 'Tata', model: 'Nexon EV', variant: 'Empowered+ LR', type: 'SUV', fuelType: 'EV', price: 1720000, expected: 34, wmi: 'MAT' },
+  { make: 'Maruti Suzuki', model: 'Grand Vitara', variant: 'Alpha+ Hybrid', type: 'SUV', fuelType: 'HYBRID', price: 1990000, expected: 28, wmi: 'MA3' },
+  { make: 'Toyota', model: 'Innova Hycross', variant: 'ZX(O) Hybrid', type: 'MUV', fuelType: 'HYBRID', price: 3030000, expected: 22, wmi: 'MBJ' },
+  { make: 'Honda', model: 'City', variant: 'ZX CVT', type: 'SEDAN', fuelType: 'PETROL', price: 1590000, expected: 32, wmi: 'MAK' },
+  { make: 'Hyundai', model: 'Verna', variant: 'SX(O) Turbo', type: 'SEDAN', fuelType: 'PETROL', price: 1640000, expected: 30, wmi: 'MAL' },
+  { make: 'Skoda', model: 'Slavia', variant: 'Style 1.5 TSI', type: 'SEDAN', fuelType: 'PETROL', price: 1780000, expected: 36, wmi: 'TMB' },
+  { make: 'Volkswagen', model: 'Virtus', variant: 'GT Plus', type: 'SEDAN', fuelType: 'PETROL', price: 1860000, expected: 35, wmi: 'WVW' },
+  { make: 'Maruti Suzuki', model: 'Swift', variant: 'ZXi+', type: 'HATCHBACK', fuelType: 'PETROL', price: 890000, expected: 18, wmi: 'MA3' },
+  { make: 'Maruti Suzuki', model: 'Baleno', variant: 'Alpha AGS', type: 'HATCHBACK', fuelType: 'PETROL', price: 960000, expected: 20, wmi: 'MA3' },
+  { make: 'Tata', model: 'Punch EV', variant: 'Empowered+ LR', type: 'SUV', fuelType: 'EV', price: 1340000, expected: 33, wmi: 'MAT' },
+  { make: 'Hyundai', model: 'i20', variant: 'Asta (O)', type: 'HATCHBACK', fuelType: 'PETROL', price: 1090000, expected: 25, wmi: 'MAL' },
+  { make: 'Mahindra', model: 'Scorpio-N', variant: 'Z8 L', type: 'SUV', fuelType: 'DIESEL', price: 2240000, expected: 27, wmi: 'MA1' },
+  { make: 'Toyota', model: 'Fortuner', variant: 'Legender 4x4', type: 'SUV', fuelType: 'DIESEL', price: 4640000, expected: 40, wmi: 'MBJ' },
+  { make: 'Kia', model: 'Sonet', variant: 'HTX', type: 'SUV', fuelType: 'PETROL', price: 1260000, expected: 24, wmi: 'MZB' },
+  { make: 'MG', model: 'ZS EV', variant: 'Exclusive Pro', type: 'SUV', fuelType: 'EV', price: 2500000, expected: 42, wmi: 'MZ7' },
+  { make: 'Tata', model: 'Harrier', variant: 'Fearless+', type: 'SUV', fuelType: 'DIESEL', price: 2560000, expected: 31, wmi: 'MAT' },
+  { make: 'Mahindra', model: 'XUV 3XO', variant: 'AX7 L', type: 'SUV', fuelType: 'PETROL', price: 1450000, expected: 26, wmi: 'MA1' },
+  { make: 'Maruti Suzuki', model: 'Ertiga', variant: 'ZXi+', type: 'MUV', fuelType: 'CNG', price: 1210000, expected: 21, wmi: 'MA3' },
+  { make: 'Hyundai', model: 'Ioniq 5', variant: 'Long Range RWD', type: 'SUV', fuelType: 'EV', price: 4600000, expected: 48, wmi: 'KMH' },
+  { make: 'Mahindra', model: 'Thar Roxx', variant: 'AX7 L 4x4', type: 'SUV', fuelType: 'DIESEL', price: 2040000, expected: 20, wmi: 'MA1' },
+  { make: 'Tata', model: 'Curvv EV', variant: 'Empowered+ A', type: 'SUV', fuelType: 'EV', price: 1900000, expected: 36, wmi: 'MAT' },
+];
+
+export const COLORS = [
+  'Midnight Black',
+  'Polar White',
+  'Titan Grey',
+  'Fiery Red',
+  'Deep Ocean Blue',
+  'Moonlight Silver',
+  'Desert Bronze',
+  'Forest Green',
+  'Pearl White',
+  'Graphite Grey',
+];
+
+export const PHOTO_ANGLES = [
+  'Front 3/4',
+  'Rear 3/4',
+  'Driver side',
+  'Passenger side',
+  'Front',
+  'Rear',
+  'Dashboard',
+  'Front seats',
+  'Rear seats',
+  'Odometer',
+  'Boot',
+  'Engine bay',
+  'Wheel & tyre',
+  'Infotainment',
+  'Roof',
+  'Keys & documents',
+  'Underbody',
+  'Headlamp detail',
+  'Tail lamp detail',
+  'Spare wheel',
+];
+
+export const TECHNICIANS = [
+  { techId: 'T01', name: 'Rahul Sharma', level: 'Senior', skills: ['GENERAL', 'BRAKES', 'SUSPENSION', 'INSPECTION', 'ENGINE'], status: 'AVAILABLE', rating: 4.8 },
+  { techId: 'T02', name: 'Priya Nair', level: 'Senior', skills: ['EV', 'ELECTRICAL', 'GENERAL', 'INSPECTION', 'DIAGNOSTICS', 'AC'], status: 'AVAILABLE', rating: 4.9 },
+  { techId: 'T03', name: 'Arjun Reddy', level: 'Mid', skills: ['BODY', 'PAINT', 'INSPECTION'], status: 'AVAILABLE', rating: 4.5 },
+  { techId: 'T04', name: 'Vikram Singh', level: 'Senior', skills: ['ENGINE', 'GENERAL', 'BRAKES', 'AC'], status: 'OFF', statusNote: 'On sick leave today', rating: 4.7 },
+  { techId: 'T05', name: 'Ananya Iyer', level: 'Mid', skills: ['EV', 'ELECTRICAL', 'DIAGNOSTICS'], status: 'AVAILABLE', rating: 4.6 },
+  { techId: 'T06', name: 'Karthik Menon', level: 'Mid', skills: ['TIRES', 'ALIGNMENT', 'GENERAL', 'BRAKES'], status: 'AVAILABLE', rating: 4.4 },
+  { techId: 'T07', name: 'Suresh Kumar', level: 'Junior', skills: ['DETAILING', 'GENERAL'], status: 'AVAILABLE', rating: 4.3 },
+  { techId: 'T08', name: 'Deepak Patil', level: 'Mid', skills: ['AC', 'ELECTRICAL', 'GENERAL', 'ENGINE'], status: 'AVAILABLE', rating: 4.5 },
+  { techId: 'T09', name: 'Meera Joshi', level: 'Junior', skills: ['INSPECTION', 'TIRES', 'GENERAL', 'DETAILING'], status: 'AVAILABLE', rating: 4.4 },
+  { techId: 'T10', name: 'Imran Khan', level: 'Senior', skills: ['BODY', 'PAINT', 'GENERAL', 'INSPECTION'], status: 'AVAILABLE', rating: 4.8 },
+];
+
+export const BAYS = [
+  { code: 'BAY-1', name: 'Bay 1', type: 'GENERAL', capabilities: ['GENERAL', 'BRAKES', 'ENGINE', 'SUSPENSION', 'INSPECTION', 'AC', 'ELECTRICAL', 'DIAGNOSTICS', 'TIRES'] },
+  { code: 'BAY-2', name: 'Bay 2', type: 'GENERAL', capabilities: ['GENERAL', 'BRAKES', 'ENGINE', 'SUSPENSION', 'INSPECTION', 'AC', 'ELECTRICAL', 'DIAGNOSTICS', 'TIRES'] },
+  { code: 'BAY-3', name: 'Bay 3', type: 'QUICK', capabilities: ['TIRES', 'ALIGNMENT', 'BRAKES', 'INSPECTION', 'GENERAL', 'DETAILING'] },
+  { code: 'BAY-4', name: 'Bay 4', type: 'EV', capabilities: ['EV', 'ELECTRICAL', 'DIAGNOSTICS', 'GENERAL', 'INSPECTION'] },
+  { code: 'BAY-5', name: 'Bay 5', type: 'BODY', capabilities: ['BODY', 'PAINT', 'DETAILING', 'INSPECTION'] },
+];
+
+// inventory tuple: [S1, S2, S3]
+const p = (partNumber, name, category, brand, compatibleModels, unitPriceINR, stock, leadTimeDays = 2) => ({
+  partNumber,
+  name,
+  category,
+  brand,
+  compatibleModels,
+  unitPriceINR,
+  leadTimeDays,
+  stock,
+});
+
+export const PARTS = [
+  p('MH-XUV7-BPF', 'Front brake pad set', 'Brakes', 'Mahindra Genuine', ['XUV700'], 4850, [0, 0, 12], 3),
+  p('MH-XUV7-BDF', 'Front brake disc (pair)', 'Brakes', 'Mahindra Genuine', ['XUV700'], 9200, [2, 1, 4], 3),
+  p('HY-CRE-ACC', 'AC compressor assembly', 'AC', 'Hyundai Mobis', ['Creta', 'Seltos'], 38500, [0, 3, 0], 4),
+  p('HY-CRE-BPF', 'Front brake pad set', 'Brakes', 'Hyundai Mobis', ['Creta', 'Seltos', 'Verna'], 3650, [6, 4, 9]),
+  p('KI-SEL-BDF', 'Front brake disc (pair)', 'Brakes', 'Kia Genuine', ['Seltos', 'Sonet'], 7800, [3, 2, 5]),
+  p('GEN-OIL-5W30', 'Engine oil 5W-30 synthetic (1 L)', 'Lubricants', 'Castrol EDGE', ['*'], 890, [64, 40, 58], 1),
+  p('GEN-OIL-0W20', 'Engine oil 0W-20 hybrid (1 L)', 'Lubricants', 'Toyota Genuine', ['Innova Hycross', 'Grand Vitara'], 1150, [22, 8, 18], 2),
+  p('GEN-OFL-HY', 'Oil filter', 'Filters', 'Hyundai Mobis', ['Creta', 'Verna', 'i20', 'Venue'], 420, [18, 12, 15]),
+  p('GEN-AFL-MS', 'Air filter element', 'Filters', 'Maruti Genuine', ['Swift', 'Baleno', 'Ertiga', 'Brezza'], 560, [14, 9, 11]),
+  p('GEN-CFL-UNI', 'Cabin AC filter (PM2.5)', 'Filters', 'Bosch', ['*'], 780, [20, 6, 17]),
+  p('GEN-WPR-24', 'Wiper blade set 24"/16"', 'Wipers', 'Bosch Aerotwin', ['*'], 1450, [12, 3, 10]),
+  p('TY-MRF-2156017', 'Tyre 215/60 R17 (MRF Wanderer)', 'Tyres', 'MRF', ['Creta', 'Seltos', 'Harrier'], 9800, [8, 4, 6]),
+  p('TY-BS-2356018', 'Tyre 235/60 R18 (Bridgestone Alenza)', 'Tyres', 'Bridgestone', ['XUV700', 'Scorpio-N'], 14200, [4, 2, 6], 3),
+  p('TY-VLV-TPMS', 'TPMS sensor with valve stem', 'Tyres', 'Schrader', ['*'], 3400, [6, 2, 5]),
+  p('TY-VLV-KIT', 'Tyre valve stem kit', 'Tyres', 'Schrader', ['*'], 180, [40, 22, 30], 1),
+  p('BAT-AMR-45', '12V battery 45Ah', 'Electrical', 'Amaron Pro', ['Swift', 'Baleno', 'i20', 'City'], 6100, [5, 3, 4]),
+  p('BAT-AMR-65', '12V battery 65Ah', 'Electrical', 'Amaron Pro', ['XUV700', 'Harrier', 'Fortuner', 'Scorpio-N'], 9400, [3, 1, 3]),
+  p('EV-TATA-COOL', 'EV battery coolant (4 L)', 'EV', 'Tata Genuine', ['Nexon EV', 'Punch EV', 'Curvv EV'], 2650, [6, 2, 4], 3),
+  p('EV-TATA-CHG', 'AC charger control module', 'EV', 'Tata Genuine', ['Nexon EV', 'Punch EV'], 18400, [1, 0, 1], 6),
+  p('GEN-BFL-DOT4', 'Brake fluid DOT 4 (500 ml)', 'Brakes', 'Bosch', ['*'], 520, [24, 10, 20], 1),
+  p('GEN-CLT-LL', 'Long-life coolant (1 L)', 'Lubricants', 'Motul', ['*'], 640, [30, 18, 26], 1),
+  p('GEN-SPK-IR', 'Iridium spark plug', 'Engine', 'NGK', ['City', 'Verna', 'Creta', 'Seltos', 'Virtus', 'Slavia'], 980, [24, 8, 16]),
+  p('GEN-H4-LED', 'Headlamp bulb H4 LED', 'Electrical', 'Philips', ['*'], 2200, [10, 4, 8]),
+  p('PNT-MBLK-KIT', 'Touch-up paint kit — Midnight Black', 'Body', 'Asian Paints PPG', ['*'], 1350, [5, 2, 4]),
+  p('PNT-PWHT-KIT', 'Touch-up paint kit — Polar White', 'Body', 'Asian Paints PPG', ['*'], 1350, [4, 3, 3]),
+  p('BDY-BMP-CLIP', 'Bumper retainer clip set', 'Body', 'OEM', ['*'], 340, [50, 20, 40], 1),
+  p('MS-SWF-BMPR', 'Rear bumper cover — Swift', 'Body', 'Maruti Genuine', ['Swift'], 6900, [1, 0, 2], 4),
+  p('TY-INV-OILF', 'Oil filter — Innova Hycross', 'Filters', 'Toyota Genuine', ['Innova Hycross'], 690, [6, 2, 5]),
+  p('KI-SON-CLT', 'Clutch plate & pressure plate kit', 'Transmission', 'Valeo', ['Sonet', 'Seltos'], 11800, [1, 1, 2], 3),
+  p('GEN-MIR-GLS', 'Side mirror glass (heated)', 'Body', 'OEM', ['*'], 1650, [4, 2, 3]),
+];
+
+export const CUSTOMERS = [
+  { customerCode: 'CUS-1001', name: 'Rohan Mehta', phone: '+91 98450 12873', email: 'rohan.mehta@example.in', vehicleId: '2847', relationship: 'PRE_DELIVERY', trackingCode: 'LF2847' },
+  { customerCode: 'CUS-1002', name: 'Sneha Rao', phone: '+91 99001 44120', email: 'sneha.rao@example.in', vehicleId: '1932', relationship: 'SERVICE', trackingCode: 'LF1932' },
+  { customerCode: 'CUS-1003', name: 'Aditya Verma', phone: '+91 97411 90235', email: 'aditya.v@example.in', vehicleId: '1544', relationship: 'SERVICE', trackingCode: 'LF1544' },
+  { customerCode: 'CUS-1004', name: 'Farhan Sheikh', phone: '+91 98861 30519', email: 'farhan.s@example.in', vehicleId: '1777', relationship: 'SERVICE', trackingCode: 'LF1777' },
+  { customerCode: 'CUS-1005', name: 'Lakshmi Narayanan', phone: '+91 94480 77612', email: 'lakshmi.n@example.in', vehicleId: '1690', relationship: 'SERVICE', trackingCode: 'LF1690' },
+  { customerCode: 'CUS-1006', name: 'Kavya Reddy', phone: '+91 90080 55231', email: 'kavya.reddy@example.in', vehicleId: '2210', relationship: 'SERVICE', trackingCode: 'LF2210' },
+  { customerCode: 'CUS-1007', name: 'Harish Gowda', phone: '+91 98455 61048', email: 'harish.g@example.in', vehicleId: '1803', relationship: 'SERVICE', trackingCode: 'LF1803' },
+  { customerCode: 'CUS-1008', name: 'Pooja Desai', phone: '+91 99860 21974', email: 'pooja.desai@example.in', vehicleId: '1488', relationship: 'SERVICE', trackingCode: 'LF1488' },
+  { customerCode: 'CUS-1009', name: 'Meghana Rao', phone: '+91 97390 88415', email: 'meghana.rao@example.in', vehicleId: '1610', relationship: 'SERVICE', trackingCode: 'LF1610' },
+  { customerCode: 'CUS-1010', name: 'Siddharth Kulkarni', phone: '+91 98806 34470', email: 'sid.k@example.in', vehicleId: '2188', relationship: 'PRE_DELIVERY', trackingCode: 'LF2188' },
+];
+
+export const USERS = [
+  { name: 'Ananya Krishnan', email: 'manager@lotflow.demo', role: 'MANAGER', title: 'General Manager' },
+  { name: 'Ravi Kumar', email: 'associate@lotflow.demo', role: 'LOT_ASSOCIATE', title: 'Lot Associate' },
+  { name: 'Neha Iyer', email: 'advisor@lotflow.demo', role: 'SERVICE_ADVISOR', title: 'Service Advisor' },
+];
+
+export const DEMO_PASSWORD = 'Demo@123';

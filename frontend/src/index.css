@@ -1,0 +1,138 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/archivo/wdth.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Archivo Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Lot palette */
+  --color-asphalt: #161b21;
+  --color-asphalt-2: #1d242c;
+  --color-asphalt-3: #27303a;
+  --color-paint: #f2c230; /* lot-marking yellow */
+  --color-chalk: #f4f5f2; /* stall-line white */
+  --color-brand: #2f5bea; /* ignition blue */
+  --color-brand-2: #5b7fff;
+
+  /* Status */
+  --color-ok: #1f9d63;
+  --color-warn: #e08a0b;
+  --color-svc: #7357e8;
+  --color-hold: #64748b;
+  --color-sold: #0e9aa7;
+  --color-bad: #e5484d;
+
+  --animate-wave: wave 1s ease-in-out infinite;
+  --animate-ring: ring 1.8s ease-out infinite;
+  --animate-rise: rise 0.35s ease-out both;
+
+  @keyframes wave {
+    0%, 100% { transform: scaleY(0.35); }
+    50% { transform: scaleY(1); }
+  }
+  @keyframes ring {
+    0% { transform: scale(1); opacity: 0.55; }
+    100% { transform: scale(1.55); opacity: 0; }
+  }
+  @keyframes rise {
+    from { transform: translateY(6px); opacity: 0; }
+    to { transform: none; opacity: 1; }
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+}
+
+:root {
+  --bg: #eceef1;
+  --surface: #ffffff;
+  --surface-2: #f5f6f8;
+  --line: #dce0e6;
+  --ink: #141a21;
+  --muted: #566170;
+  --faint: #8a94a3;
+  color-scheme: light;
+}
+.dark {
+  --bg: #0f1317;
+  --surface: #161b21;
+  --surface-2: #1c2229;
+  --line: #2a323c;
+  --ink: #e8ecf1;
+  --muted: #9ba6b4;
+  --faint: #6c7786;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+body {
+  @apply bg-bg text-ink antialiased;
+  font-feature-settings: 'tnum' 1;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Typographic roles */
+.t-display {
+  font-stretch: 112%;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+.t-title {
+  font-stretch: 108%;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+.t-condensed {
+  font-stretch: 72%;
+}
+.t-num {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-paint);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Asphalt texture used by the lot map and the voice assistant */
+.asphalt {
+  background-color: var(--color-asphalt);
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(rgba(0, 0, 0, 0.25) 1px, transparent 1px);
+  background-size: 7px 7px, 11px 11px;
+  background-position: 0 0, 3px 5px;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
